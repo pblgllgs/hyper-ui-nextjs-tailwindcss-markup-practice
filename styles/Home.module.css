@@ -21,6 +21,72 @@
   align-items: center;
 }
 
+.columnaUno{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.columnaDos{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.columnaTres{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.box123{
+  font-size: x-large;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  justify-content:  space-between;
+  margin: 5px;
+  border-radius: 5rem;
+}
+.box456{
+  font-size: x-large;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: 50px;
+  align-items: center;
+  background-color: grey;
+  justify-content:  space-between;
+  margin: 5px;
+  border-radius: 5rem;
+}
+.box789{
+  color: white;
+  font-size: x-large;
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: purple;
+  justify-content:  space-between;
+  margin: 5px;
+  border-radius: 5rem;
+}
+
+.number{
+  padding: 10px;
+}
+
+.sudoku{
+  display: flex;
+  flex-direction: row;
+}
+
 .footer a {
   display: flex;
   justify-content: center;
