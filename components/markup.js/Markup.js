@@ -4,11 +4,15 @@ import styles from './Markup.module.css';
 const Markup = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.navbar}>
-        <div className={styles.nav}>navbar</div>
-        <div className={styles.nav}>navbar</div>
-        <div className={styles.nav}>navbar</div>
-        <div className={styles.nav}>navbar</div>
+      <div className={styles.navWrapper}>
+        <div className={styles.menu}>Menu</div>
+        <div className={styles.navbar}>
+          <div className={styles.nav}>navbar</div>
+          <div className={styles.nav}>navbar</div>
+          <div className={styles.nav}>navbar</div>
+          <div className={styles.nav}>navbar</div>
+        </div>
+        <div className={styles.auth}>Login</div>
       </div>
       <div className={styles.wrapperContainer}>
         <div className={styles.sidebar}>
@@ -53,6 +57,11 @@ const Markup = () => {
             <div className={styles.hola}>block3</div>
           </div>
         </div>
+      </div>
+      <div className={styles.rowMessage}>
+        <div className={styles.message}>Row</div>
+        <div className={styles.message}>Row</div>
+        <div className={styles.message}>Row</div>
       </div>
       <div className={styles.footer}>
         <div className={styles.footerWrapper}>footer</div>
