@@ -1,5 +1,5 @@
 import React from 'react'
-import Markup from '../components/markup.js/Markup'
+import Markup from '../components/markup/Markup'
 
 const markup = () => {
   return (
