@@ -1,33 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
 import styles from './Slider.module.css';
 
-const Slider = () => {
-  const [images, setImages] = useState([]);
-  useEffect(() => {
-    const getImages = async () => {
-      const resp = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia?take=12`
-      );
-      const response = await resp.json();
-      const imgs = response.map((img) => {
-        return {
-          id: img.id,
-          img: img.image,
-        };
-      });
-      setImages(imgs);
-    };
-    getImages();
-  });
+const Slider = ({tecnos}) => {
   return (
     <div className={styles.container}>
-      {images.map((img, idx) => {
+      {tecnos.map((img, idx) => {
         return (
           <div key={idx} className={styles.image}>
             <Link href={`/tecnologias/${img.id}`}>
-              <Image src={img.img} alt={img} width={100} height={100} />
+              <Image src={img.image} alt={img} width={100} height={100} />
             </Link>
           </div>
         );

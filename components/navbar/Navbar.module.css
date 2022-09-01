@@ -1,3 +1,30 @@
-.container{
-    margin: 10px;
+.container {
+  width: 1500px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 2px solid black; */
+}
+
+.nav {
+  /* border: 2px solid black; */
+}
+
+.title {
+  /* border: 2px solid black; */
+}
+
+.header {
+  width: 1500px;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons {
+  /* border: 2px solid black; */
+  justify-content: space-between;
 }
