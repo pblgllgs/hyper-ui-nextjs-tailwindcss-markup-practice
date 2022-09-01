@@ -24,9 +24,13 @@ export default function Home({ response1, response2 }) {
 // You should use getServerSideProps when:
 // - Only if you need to pre-render a page whose data must be fetched at request time
 export const getServerSideProps = async (ctx) => {
-  const resp1 = await fetch('http://localhost:3000/api/tecno?take=12&skip=0');
+  const resp1 = await fetch(
+    'https://backend-tecnologias.vercel.app/api/tecno?take=12&skip=0'
+  );
   const response1 = await resp1.json();
-  const resp2 = await fetch('http://localhost:3000/api/tecno?take=12&skip=12');
+  const resp2 = await fetch(
+    'https://backend-tecnologias.vercel.app/api/tecno?take=12&skip=12'
+  );
   const response2 = await resp2.json();
   return {
     props: { response1, response2 },
