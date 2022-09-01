@@ -1,36 +1,40 @@
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Card } from '../components';
 import styles from '../styles/Tecnologias.module.css';
 
 const TecnologiasPage = ({ response }) => {
   const [tecno, setTecno] = useState(response);
 
-  const handleClickOne = async () => {
-    const resp = await fetch(
-      `${
-        process.env.NEXT_PUBLIC_BASE_URL
-      }/api/v1/tecnologia?&take=${4}&skip=${0}`
-    );
-    const response = await resp.json();
-    setTecno(response);
-  };
+  const buttons = [1, 2, 3, 4, 5, 6];
 
-  const handleClickTwo = async () => {
+  const handleClick = async (valor) => {
+    let skip = 0;
+    switch (valor) {
+      case 1:
+        skip = 0;
+        break;
+      case 2:
+        skip = 4;
+        break;
+      case 3:
+        skip = 8;
+        break;
+      case 4:
+        skip = 12;
+        break;
+      case 5:
+        skip = 16;
+        break;
+      case 6:
+        skip = 20;
+        break;
+      default:
+        skip = 0;
+        break;
+    }
     const resp = await fetch(
-      `${
-        process.env.NEXT_PUBLIC_BASE_URL
-      }/api/v1/tecnologia?&take=${4}&skip=${4}`
-    );
-    const response = await resp.json();
-    setTecno(response);
-  };
-
-  const handleClickThre = async () => {
-    const resp = await fetch(
-      `${
-        process.env.NEXT_PUBLIC_BASE_URL
-      }/api/v1/tecnologia?&take=${4}&skip=${8}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia?&take=4&skip=${skip}`
     );
     const response = await resp.json();
     setTecno(response);
@@ -46,36 +50,20 @@ const TecnologiasPage = ({ response }) => {
       </div>
 
       <div className={styles.row2}>
-        <button onClick={handleClickOne}>
-          <div className="flex flex-row justify-center items-center">
-            <Image
-              src="/static/look_1.svg"
-              alt="play"
-              width={'48px'}
-              height={'48px'}
-            />
-          </div>
-        </button>
-        <button onClick={handleClickTwo}>
-          <div className="flex flex-row justify-center items-center">
-            <Image
-              src="/static/looks_2.svg"
-              alt="play"
-              width={'48px'}
-              height={'48px'}
-            />
-          </div>
-        </button>
-        <button onClick={handleClickThre}>
-          <div className="flex flex-row justify-center items-center">
-            <Image
-              src="/static/looks_3.svg"
-              alt="play"
-              width={'48px'}
-              height={'48px'}
-            />
-          </div>
-        </button>
+        {buttons.map((button, idx) => {
+          return (
+            <button key={idx} onClick={() => handleClick(button)}>
+              <div className="flex flex-row justify-center items-center">
+                <Image
+                  src={`/static/looks_${button}.svg`}
+                  alt="play"
+                  width={'48px'}
+                  height={'48px'}
+                />
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
