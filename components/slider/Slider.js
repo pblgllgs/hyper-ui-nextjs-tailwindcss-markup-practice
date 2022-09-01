@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './Slider.module.css';
 
 const Slider = ({tecnos}) => {
+  console.log(tecnos);
   return (
     <div className={styles.container}>
       {tecnos.map((img, idx) => {
