@@ -8,7 +8,7 @@ const Slider = () => {
   useEffect(() => {
     const getImages = async () => {
       const resp = await fetch(
-        'http://localhost:3001/api/v1/tecnologia?take=12'
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia?take=12`
       );
       const response = await resp.json();
       const imgs = response.map((img) => {

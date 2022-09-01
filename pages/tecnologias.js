@@ -8,7 +8,9 @@ const TecnologiasPage = ({ response }) => {
 
   const handleClickOne = async () => {
     const resp = await fetch(
-      `http://localhost:3001/api/v1/tecnologia?&take=${4}&skip=${0}`
+      `${
+        process.env.NEXT_PUBLIC_BASE_URL
+      }/api/v1/tecnologia?&take=${4}&skip=${0}`
     );
     const response = await resp.json();
     setTecno(response);
@@ -16,7 +18,9 @@ const TecnologiasPage = ({ response }) => {
 
   const handleClickTwo = async () => {
     const resp = await fetch(
-      `http://localhost:3001/api/v1/tecnologia?&take=${4}&skip=${4}`
+      `${
+        process.env.NEXT_PUBLIC_BASE_URL
+      }/api/v1/tecnologia?&take=${4}&skip=${4}`
     );
     const response = await resp.json();
     setTecno(response);
@@ -24,7 +28,9 @@ const TecnologiasPage = ({ response }) => {
 
   const handleClickThre = async () => {
     const resp = await fetch(
-      `http://localhost:3001/api/v1/tecnologia?&take=${4}&skip=${8}`
+      `${
+        process.env.NEXT_PUBLIC_BASE_URL
+      }/api/v1/tecnologia?&take=${4}&skip=${8}`
     );
     const response = await resp.json();
     setTecno(response);
@@ -80,7 +86,9 @@ export default TecnologiasPage;
 // You should use getServerSideProps when:
 // - Only if you need to pre-render a page whose data must be fetched at request time
 export const getServerSideProps = async (ctx) => {
-  const resp = await fetch(`http://localhost:3001/api/v1/tecnologia`);
+  const resp = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia`
+  );
   const response = await resp.json();
   return {
     props: {

@@ -57,7 +57,9 @@ export default TecnologiasPage;
 
 // You should use getStaticPaths if you’re statically pre-rendering pages that use dynamic routes
 export const getStaticPaths = async (ctx) => {
-  const resp = await fetch('http://localhost:3001/api/v1/tecnologia?take=4');
+  const resp = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia?take=4`
+  );
   const response = await resp.json();
   const paths = response.map((tec) => {
     return {
@@ -76,7 +78,9 @@ export const getStaticPaths = async (ctx) => {
 // - Only if you need to pre-render a page whose data must be fetched at request time
 export const getStaticProps = async ({ params }) => {
   const { id } = params;
-  const resp = await fetch(`http://localhost:3001/api/v1/tecnologia/${id}`); // your fetch function here
+  const resp = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia/${id}`
+  ); // your fetch function here
   const tecnologia = await resp.json();
   return {
     props: {
