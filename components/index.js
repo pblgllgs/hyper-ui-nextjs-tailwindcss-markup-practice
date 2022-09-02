@@ -5,3 +5,4 @@ export { default as Banner } from './banner';
 export { default as Navbar } from './navbar';
 export { default as Slider } from './slider';
 export { default as Section } from './section';
+export { default as FormTecnolgia } from './form';

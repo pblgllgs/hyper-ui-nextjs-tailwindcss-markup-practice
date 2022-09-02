@@ -1,8 +1,13 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
+  const router =  useRouter()
+  const handleGoToAdd = () => {
+    router.push("/addTecnologia")
+  }
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -50,6 +55,7 @@ const Navbar = () => {
                   <button
                     className="block px-5 py-3 text-sm font-medium text-white bg-indigo-600 rounded-lg transition hover:bg-indigo-700 focus:outline-none focus:ring"
                     type="button"
+                    onClick={handleGoToAdd}
                   >
                     Create Post
                   </button>
