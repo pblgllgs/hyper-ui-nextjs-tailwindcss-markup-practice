@@ -57,7 +57,7 @@ const Navbar = () => {
                     type="button"
                     onClick={handleGoToAdd}
                   >
-                    Create Post
+                    Agregar tecnología
                   </button>
                 </div>
               </div>

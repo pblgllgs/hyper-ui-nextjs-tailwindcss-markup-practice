@@ -106,9 +106,9 @@ const FormTecnolgia = () => {
               {uploadData && (
                 <Image src={imageSrc} alt={'img'} width={400} height={400} />
               )}
-              <code>
+              {/* <code>
                 <pre>{JSON.stringify(formState, null, 2)}</pre>
-              </code>
+              </code> */}
             </div>
 
             <div className="p-8 bg-white rounded-lg shadow-lg lg:p-12 lg:col-span-3">
@@ -182,7 +182,7 @@ const FormTecnolgia = () => {
                     type="submit"
                     className="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto"
                   >
-                    <span className="font-medium"> Send Enquiry </span>
+                    <span className="font-medium"> Guardar </span>
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
