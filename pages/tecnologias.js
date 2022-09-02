@@ -15,26 +15,26 @@ const TecnologiasPage = ({ response }) => {
         skip = 0;
         break;
       case 2:
-        skip = 4;
+        skip = 5;
         break;
       case 3:
-        skip = 8;
+        skip = 10;
         break;
       case 4:
-        skip = 12;
+        skip = 15;
         break;
       case 5:
-        skip = 16;
+        skip = 20;
         break;
       case 6:
-        skip = 20;
+        skip = 25;
         break;
       default:
         skip = 0;
         break;
     }
     const resp = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia?&take=4&skip=${skip}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia?&take=5&skip=${skip}`
     );
     const response = await resp.json();
     setTecno(response);
@@ -75,7 +75,7 @@ export default TecnologiasPage;
 // - Only if you need to pre-render a page whose data must be fetched at request time
 export const getServerSideProps = async (ctx) => {
   const resp = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/tecnologia?&take=5`
   );
   const response = await resp.json();
   return {

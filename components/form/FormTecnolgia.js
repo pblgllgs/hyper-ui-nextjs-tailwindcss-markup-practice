@@ -90,6 +90,7 @@ const FormTecnolgia = () => {
       'https://backend-tecnologias.vercel.app/api/v1/tecnologia',
       requestOptions
     );
+    SetFormState(initialState)
   };
 
   return (
