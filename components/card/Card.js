@@ -13,21 +13,21 @@ const Card = ({ tec }) => {
         <a>
           <div className=" flex flex-col justify-center items-center">
             <Image
-              className="object-cover w-full h-56"
+              className="object-cover w-full h-56 rounded-lg"
               src={image}
               alt={name}
-              width={400}
-              height={400}
+              width={300}
+              height={300}
               priority
             />
           </div>
 
-          <div className="p-6">
+          <div className="p-6 rounded-lg">
             <h5 className="text-xl font-bold">{name}</h5>
 
             <p className="mt-2 text-sm text-gray-500">{owner}</p>
             <p className="mt-2 text-sm text-gray-500">
-              {description.substring(0, 50) + '...'}
+              {description.substring(0, 34) + '...'}
             </p>
             <h5 className="text">{createdAt.substring(0, 10)}</h5>
 

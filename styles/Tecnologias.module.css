@@ -1,8 +1,11 @@
 .row1{
  display: flex;
+ flex-wrap: wrap;
  flex-direction: row;
  justify-content: space-between;
  align-items: center;
+ width: 1750px;
+ background-color: powderblue;
 }
 
 .row2{

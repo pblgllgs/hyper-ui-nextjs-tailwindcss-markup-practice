@@ -12,10 +12,10 @@ const TecnologiasPage = ({ tecnologia }) => {
       {tecno && (
         <div className="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
-            <div className="relative z-10 lg:py-16">
+            <div className="relative z-10 lg:py-16 flex flex-col items-center justify-center">
               <div className="relative h-64 sm:h-80 lg:h-full">
                 <Image
-                  className="absolute inset-0 object-cover w-full h-full"
+                  className="absolute inset-0 object-cover w-full h-full rounded-lg"
                   src={tecno.image}
                   alt={tecno.name}
                   width={400}
@@ -24,16 +24,10 @@ const TecnologiasPage = ({ tecnologia }) => {
               </div>
             </div>
 
-            <div className="relative flex items-center bg-gray-100">
-              <span className="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"></span>
-
+            <div className="relative flex items-center bg-gray-200 rounded-2xl">
               <div className="p-8 sm:p-16 lg:p-24">
-                <h2 className="text-3xl font-bold sm:text-4xl">
-                  {tecno.name}
-                </h2>
-                <h2 className="text-xl font-bold sm:text-2xl">
-                  {tecno.owner}
-                </h2>
+                <h2 className="text-3xl font-bold sm:text-4xl">{tecno.name}</h2>
+                <h2 className="text-xl font-bold sm:text-2xl">{tecno.owner}</h2>
 
                 <p className="mt-4 text-gray-600">{tecno.description}</p>
                 <Link href={'/'} passHref>
