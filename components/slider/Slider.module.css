@@ -9,4 +9,9 @@
 .image{
     margin: 10px;
     cursor: pointer;
+    border-radius: 15px;
+}
+
+.img{
+    border-radius: 10px;
 }

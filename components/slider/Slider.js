@@ -10,7 +10,7 @@ const Slider = ({tecnos}) => {
         return (
           <div key={idx} className={styles.image}>
             <Link href={`/tecnologias/${img.id}`}>
-              <Image src={img.image} alt={img} width={100} height={100} />
+              <Image src={img.image} alt={img} width={100} height={100} className={styles.img} />
             </Link>
           </div>
         );
