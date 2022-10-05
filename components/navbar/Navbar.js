@@ -20,7 +20,7 @@ const Navbar = () => {
                     Bienvenido!
                   </h1>
 
-                  <p className="mt-1.5 text-sm text-gray-500">
+                  <p className="mt-1.5 text-sm text-white">
                     Vamos a conocer algo nuevo! 🎉
                   </p>
                 </div>
@@ -28,7 +28,7 @@ const Navbar = () => {
               <div className={styles.buttons}>
                 <div className="flex flex-col mt-4 gap-4 sm:flex-row sm:mt-0 sm:items-center">
                   <button
-                    className="inline-flex items-center justify-center px-5 py-3 text-gray-500 border border-gray-200 rounded-lg transition hover:text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring"
+                    className="inline-flex items-center justify-center bg-white px-5 py-3 text-gray-500 border border-gray-200 rounded-lg transition hover:text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring"
                     type="button"
                   >
                     <Link href="/git" passHref>
