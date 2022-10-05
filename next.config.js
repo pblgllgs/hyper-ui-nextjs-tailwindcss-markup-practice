@@ -8,6 +8,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/git',
+        destination:
+          'https://github.com/pblgllgs/hyper-ui-nextjs-tailwindcss-markup-practice',
+        permanent: false,
+        basePath: false,
+      },
+      {
         source: '/dev.to',
         destination: 'https://dev.to/',
         permanent: false,

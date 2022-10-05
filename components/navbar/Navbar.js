@@ -4,10 +4,10 @@ import React from 'react';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
-  const router =  useRouter()
+  const router = useRouter();
   const handleGoToAdd = () => {
-    router.push("/addTecnologia")
-  }
+    router.push('/addTecnologia');
+  };
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -31,10 +31,12 @@ const Navbar = () => {
                     className="inline-flex items-center justify-center px-5 py-3 text-gray-500 border border-gray-200 rounded-lg transition hover:text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring"
                     type="button"
                   >
-                    <span className="text-sm font-medium">
-                      {' '}
-                      Ir al repositorio{' '}
-                    </span>
+                    <Link href="/git" passHref>
+                      <span className="text-sm font-medium">
+                        {' '}
+                        Ir al repositorio{' '}
+                      </span>
+                    </Link>
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
